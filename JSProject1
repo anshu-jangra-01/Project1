@@ -1,0 +1,36 @@
+// Define an array to store all NFTs
+const NFTs = [];
+
+// Function to mint a new NFT
+function mintNFT(Name, Uniqueness, Description, Authenticity) {
+    const nft = {
+        "Name": Name,
+        "Uniqueness": Uniqueness,
+        "Description": Description,
+        "Authenticity": Authenticity,
+    };
+    NFTs.push(nft);
+}
+
+// Function to list all NFTs
+function listNFTs() {
+    for(let i=0; i<NFTs.length; i++){
+        console.log("Name:" + NFTs[i].Name);
+        console.log("Uniqueness:"+ NFTs[i].Uniqueness);
+        console.log("Description:" + NFTs[i].Description);
+        console.log("Authenticity:" + NFTs[i].Authenticity);
+    };
+}
+
+// Function to get the total supply of NFTs 
+function getTotalSupply() {
+    console.log(NFTs.length);
+}
+
+// Minting some NFTs
+mintNFT("OpenSea", "unique", "non-fungible token (NFT) marketplace that allows users to buy, sell, and create NFTs", "authentic");
+mintNFT("NiftyGateways", "unique", "Nifty Gateway Studio brings together artists and their communities through NFTs.", "authentic");
+mintNFT("Cryptopunks", "unique", "makes the individual the sole owner of a one-of-a-kind pixel avatar", "authentic");
+
+// List all NFTs
+listNFTs();
